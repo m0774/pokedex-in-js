@@ -9,8 +9,16 @@
 
 body{
     text-align: center;
-    background: linear-gradient(to bottom, #6ab7f5, #fff);
     min-height: 100vh;
+    background-color: #222;
+}
+
+.bg__svg{
+    position: absolute;
+    top: -8%;
+    left: 55%;
+    opacity: 0.1;
+    width: 70vh ;
 }
 
 main{

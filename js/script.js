@@ -3,6 +3,7 @@ const pokemonName = document.querySelector('.pokemon__name');
 const pokemonNumber = document.querySelector('.pokemon__number');
 const pokemonImage = document.querySelector('.pokemon__image');
 const pokemonTypeContainer = document.querySelector('.pokemon__type');
+const pokemonBg = document.querySelector('body');
 
 
 const form = document.querySelector('.form');
@@ -49,6 +50,8 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.style.display = 'none';
         pokemonName.innerHTML = 'Not found :c';
         pokemonNumber.innerHTML = '';
+        pokemonTypeContainer.innerHTML =''
+        input.value = '';
     }
 };
 
@@ -62,9 +65,13 @@ const typeFontColors = {
 };
 
 const createPokemonTypes = (types) => {
+    const pokemonTypeContainer = document.querySelector('.pokemon__type');
+    const pokemonBg = document.querySelector('body');
+
     pokemonTypeContainer.innerHTML = '';
 
     const ul = document.createElement('ul');
+    const primaryType = types[0].type.name;
 
     types.forEach((typeObj) => {
         const li = document.createElement('li');
@@ -74,9 +81,11 @@ const createPokemonTypes = (types) => {
         li.style.backgroundColor = typeColors[typeObj.type.name] || '#ccc';
         li.style.color = typeFontColors[typeObj.type.name] || '#ccc';
         ul.appendChild(li);
+        
     });
 
     pokemonTypeContainer.appendChild(ul);
+    pokemonBg.style.backgroundColor = typeColors[primaryType] || '#fff';
 };
 
 
