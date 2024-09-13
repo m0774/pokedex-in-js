@@ -10,15 +10,7 @@
 body{
     text-align: center;
     min-height: 100vh;
-    background-color: #222;
-}
-
-.bg__svg{
-    position: absolute;
-    top: -8%;
-    left: 55%;
-    opacity: 0.1;
-    width: 70vh ;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
 }
 
 main{
@@ -33,12 +25,45 @@ main{
     max-width: 425px;
 }
 
+.bg__pokemon{
+    position: absolute;
+    background-color: #74CB48;
+    width: 56.5%;
+    height: 25.6%;
+    border-radius: 10px;
+    z-index: 1;
+    bottom: 47%;
+    left: 17.8%;
+    border: 2px solid #333;
+}
+
+.bg__pokemon svg{
+    position: absolute;
+    top: 3%;
+    left: 53.4%;
+    opacity: 0.1;
+    width: 45% ;
+}
+
+.sombra__pokemon{
+    position: absolute;
+    width: 70%;
+    height: 20%;
+    background: linear-gradient(to bottom, #666, #000);
+    top: 70%;
+    left: 60%;
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(-63%, 20%);
+}
+
 .pokemon__image{
     position: absolute;
     bottom:55%;
     left: 50%;
     transform: translate(-63%, 20%);
     height: 18%;
+    z-index: 2;
 }
 
 .pokemon__shiny{
@@ -75,8 +100,9 @@ main{
     border: none; 
     padding: 0; 
     margin: 0; 
-    top: 48.8%;
-    left: 19.3%;
+    top: 23.5%;
+    left: 18%;
+    z-index: 2;
 }
 
 .pokemon__type ul{

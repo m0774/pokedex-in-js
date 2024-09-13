@@ -3,7 +3,7 @@ const pokemonName = document.querySelector('.pokemon__name');
 const pokemonNumber = document.querySelector('.pokemon__number');
 const pokemonImage = document.querySelector('.pokemon__image');
 const pokemonTypeContainer = document.querySelector('.pokemon__type');
-const pokemonBg = document.querySelector('body');
+const pokemonBg = document.querySelector('.bg__pokémon');
 
 
 const form = document.querySelector('.form');
@@ -50,7 +50,7 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.style.display = 'none';
         pokemonName.innerHTML = 'Not found :c';
         pokemonNumber.innerHTML = '';
-        pokemonTypeContainer.innerHTML =''
+        pokemonTypeContainer.innerHTML = '';
         input.value = '';
     }
 };
@@ -66,7 +66,7 @@ const typeFontColors = {
 
 const createPokemonTypes = (types) => {
     const pokemonTypeContainer = document.querySelector('.pokemon__type');
-    const pokemonBg = document.querySelector('body');
+    const pokemonBg = document.querySelector('.bg__pokemon');
 
     pokemonTypeContainer.innerHTML = '';
 
