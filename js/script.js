@@ -75,7 +75,6 @@ const createPokemonTypes = (types) => {
         ul.appendChild(li);
     });
 
-    // Adiciona o ul dentro da div.pokemon__type
     pokemonTypeContainer.appendChild(ul);
 };
 
