@@ -54,7 +54,7 @@ const renderPokemon = async (pokemon) => {
 
 
 const typeColors = {
-    fire: '#F08030', water: '#6890F0', grass: '#78C850',electric: '#F8D030', ice: '#98D8D8', fighting: '#C03028', poison: '#A040A0', ground: '#E0C068', flying: '#A890F0', psychic: '#F85888', bug: '#A8B820', rock: '#B8A038', ghost: '#705898', dragon: '#7038F8', dark: '#705848', steel: '#B8B8D0', fairy: '#EE99AC', normal: '#A8A878'
+    fire: '#F57D31', water: '#6493EB', grass: '#74CB48',electric: '#F9CF30', ice: '#9AD6DF', fighting: '#C12239', poison: '#A43E9E', ground: '#DEC16B', flying: '#A891EC', psychic: '#FB5584', bug: '#A7B723', rock: '#B69E31', ghost: '#70559B', dragon: '#7037FF', dark: '#75574C', steel: '#B7B9D0', fairy: '#E69EAC', normal: '#AAA67F'
 };
 
 const typeFontColors = {
@@ -68,8 +68,9 @@ const createPokemonTypes = (types) => {
 
     types.forEach((typeObj) => {
         const li = document.createElement('li');
-        const typeName = typeObj.type.name.toUpperCase();
-        li.innerHTML = typeName;
+        const typeName = typeObj.type.name;
+        const formattedTypeName = typeName.charAt(0).toUpperCase() + typeName.slice(1).toLowerCase();
+        li.innerHTML = formattedTypeName;
         li.style.backgroundColor = typeColors[typeObj.type.name] || '#ccc';
         li.style.color = typeFontColors[typeObj.type.name] || '#ccc';
         ul.appendChild(li);
