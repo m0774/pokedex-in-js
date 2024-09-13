@@ -157,7 +157,7 @@ main{
 
 .pokemon__info{
     position: absolute;
-    bottom: 19.4%;
+    bottom: 19%;
     left: 56%;
     width: 65%;
     transform: translate(-57%, 0);
