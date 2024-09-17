@@ -45,8 +45,43 @@
         </form>
 
         <div class="pokemon__info">
-            <button class="more__info">More Info ? </button>
+            <button class="more__info" id="openModalBtn">More Info ? </button>
         </div>
+
+    <section class="detail-section section">
+        <div id="myModal" class="modal" style="z-index: 3;">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+
+
+
+              <p class="pokemon__description"></p>
+              <p class="base__stats">Base Stats</p>
+                <div class="stats__wrapper">
+                    <div class="stats_wrap" data-stat="hp">
+                        <p class="body3-fonts stats">HP</p>
+                        <p class="body3-fonts"></p>
+                        <progress value="" max="100" class="progress-bar"></progress>
+                    </div>
+                    <div class="stats_wrap" data-stat="atk"></div>
+                        <p class="body3-fonts stats">ATK</p>
+                        <p class="body3-fonts"></p>
+                        <progress value="" max="100" class="progress-bar"></progress>
+                    </div>
+                    <div class="stats_wrap" data-stat="def"></div>
+                        <p class="body3-fonts stats">DEF</p>
+                        <p class="body3-fonts"></p>
+                        <progress value="" max="100" class="progress-bar"></progress>
+                    </div>
+                    <div class="stats_wrap" data-stat="satk"></div>
+                        <p class="body3-fonts stats">SATK</p>
+                        <p class="body3-fonts"></p>
+                        <progress value="" max="100" class="progress-bar"></progress>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
 
         <div class="buttons">
             <button class="button btn_prev">Prev &lt;</button>
@@ -63,6 +98,8 @@
         </div>
 
     </main>
+
+    <script defer src="./js/modal,js"></script>
 
 </body>
 </html>
