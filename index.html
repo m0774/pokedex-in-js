@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +14,25 @@
 
     <title>Pokédex</title>
 </head>
+
 <body>
-           
+
     <main>
-        
+
         <img src="#" alt="pokemon" class="pokemon__image" draggable="false">
-        
+
         <button class="pokemon__shiny">
             <span>Shiny</span>
             <svg width="4.5%" height="4.5%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" stroke="#3a444d" stroke-width="2"/>
+                <path
+                    d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"
+                    stroke="#3a444d" stroke-width="2" />
             </svg>
         </button>
 
         <div class="pokemon__type"></div>
 
-        
+
         <h1 class="pokemon__data">
             <span class="pokemon__number"></span> -
             <span class="pokemon__name"></span>
@@ -36,51 +40,105 @@
         </h1>
 
         <form class="form">
-            <input 
-            type="search"
-            class="input__search"
-            placeholder="Name or Number"
-            required
-            />
+            <input type="search" class="input__search" placeholder="Name or Number" required />
         </form>
 
         <div class="pokemon__info">
             <button class="more__info" id="openModalBtn">More Info ? </button>
         </div>
 
-    <section class="detail-section section">
-        <div id="myModal" class="modal" style="z-index: 3;">
-            <div class="modal-content">
-              <span class="close">&times;</span>
+        <section class="detail-section section">
+            <div id="myModal" class="modal" style="z-index: 3;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
 
 
 
-              <p class="pokemon__description"></p>
-              <p class="base__stats">Base Stats</p>
-                <div class="stats__wrapper">
-                    <div class="stats_wrap" data-stat="hp">
-                        <p class="body3-fonts stats">HP</p>
-                        <p class="body3-fonts"></p>
-                        <progress value="" max="100" class="progress-bar"></progress>
-                    </div>
-                    <div class="stats_wrap" data-stat="atk"></div>
-                        <p class="body3-fonts stats">ATK</p>
-                        <p class="body3-fonts"></p>
-                        <progress value="" max="100" class="progress-bar"></progress>
-                    </div>
-                    <div class="stats_wrap" data-stat="def"></div>
-                        <p class="body3-fonts stats">DEF</p>
-                        <p class="body3-fonts"></p>
-                        <progress value="" max="100" class="progress-bar"></progress>
-                    </div>
-                    <div class="stats_wrap" data-stat="satk"></div>
-                        <p class="body3-fonts stats">SATK</p>
-                        <p class="body3-fonts"></p>
-                        <progress value="" max="100" class="progress-bar"></progress>
-                    </div>
+                    <main class="detail-main main">
+                        <header class="header">
+                            <div class="header-wrapper">
+                                <div class="header-wrap">
+                                    <a href="./index.html" class="back-btn-wrap">
+                                        <img src="./images/back-to-home.svg" alt="back to home" class="back-btn"
+                                            id="back-btn" />
+                                    </a>
+                                    <div class="name-wrap">
+                                        <h1 class="name"></h1>
+                                    </div>
+                                </div>
+                                <div class="pokemon-id-wrap">
+                                    <p class="body2-fonts"></p>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="featured-img">
+                            <a href="#" class="arrow left-arrow" id="leftArrow">
+                                <img src="./images/chevron_left.svg" alt="back" />
+                            </a>
+                            <div class="detail-img-wrapper">
+                                <img src="" alt="" />
+                            </div>
+                            <a href="#" class="arrow right-arrow" id="rightArrow">
+                                <img src="./images/chevron_right.svg" alt="forward" />
+                            </a>
+                        </div>
+                        <div class="detail-card-detail-wrapper">
+                            <div class="power-wrapper">
+                                <p class="body3-fonts type grass"></p>
+                                <p class="body3-fonts type poison"></p>
+                            </div>
+                            <p class="body2-fonts about-text">About</p>
+                            <div class="pokemon-detail-wrapper">
+                                <div class="pokemon-detail-wrap">
+                                    <div class="pokemon-detail">
+                                        <img src="./images/weight.svg" alt="weight" />
+                                        <p class="body3-fonts weight"></p>
+                                    </div>
+                                    <p class="caption-fonts">Weight</p>
+                                </div>
+                                <div class="pokemon-detail-wrap">
+                                    <div class="pokemon-detail">
+                                        <img src="./images/height.svg" alt="height" class="straighten" />
+                                        <p class="body3-fonts height"></p>
+                                    </div>
+                                    <p class="caption-fonts">Height</p>
+                                </div>
+                                <div class="pokemon-detail-wrap">
+                                    <div class="pokemon-detail move"></div>
+                                    <p class="caption-fonts">Move</p>
+                                </div>
+                            </div>
+                            <p class="body3-fonts pokemon-description"></p>
+                            <p class="body2-fonts about-text">Base Stats</p>
+                            <div class="stats-wrapper">
+                                <div class="stats-wrap" data-stat="hp">
+                                    <p class="body3-fonts stats">HP</p>
+                                    <p class="body3-fonts"></p>
+                                    <progress value="" max="100" class="progress-bar"></progress>
+                                </div>
+                                <div class="stats-wrap" data-stat="ATK">
+                                    <p class="body3-fonts stats">ATK</p>
+                                    <p class="body3-fonts"></p>
+                                    <progress value="" max="100" class="progress-bar"></progress>
+                                </div>
+                                <div class="stats-wrap" data-stat="DEF">
+                                    <p class="body3-fonts stats">DEF</p>
+                                    <p class="body3-fonts"></p>
+                                    <progress value="" max="100" class="progress-bar"></progress>
+                                </div>
+                                <div class="stats-wrap" data-stat="SATK">
+                                    <p class="body3-fonts stats">SATK</p>
+                                    <p class="body3-fonts"></p>
+                                    <progress value="" max="100" class="progress-bar"></progress>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="./images/pokedex.svg" alt="pokedex" class="detail-bg" />
+                    </main>
                 </div>
             </div>
-          </div>
+            </div>
+            </div>
         </section>
 
         <div class="buttons">
@@ -92,14 +150,20 @@
         <div class="bg__pokemon">
             <div class="sombra__pokemon"></div>
             <svg viewBox="0 0 206 208" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M127.709 104C127.709 117.676 116.622 128.762 102.947 128.762C89.2712 128.762 78.1849 117.676 78.1849 104C78.1849 90.3244 89.2712 79.2381 102.947 79.2381C116.622 79.2381 127.709 90.3244 127.709 104Z" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M102.947 208C155.34 208 198.684 169.257 205.894 118.857H144.982C138.863 136.169 122.353 148.571 102.947 148.571C83.5401 148.571 67.0303 136.169 60.9116 118.857H0C7.20912 169.257 50.5535 208 102.947 208ZM60.9116 89.1429H0C7.20912 38.7431 50.5535 0 102.947 0C155.34 0 198.684 38.7431 205.894 89.1429H144.982C138.863 71.8314 122.353 59.4286 102.947 59.4286C83.5401 59.4286 67.0303 71.8314 60.9116 89.1429ZM127.709 104C127.709 117.676 116.622 128.762 102.947 128.762C89.2712 128.762 78.1849 117.676 78.1849 104C78.1849 90.3244 89.2712 79.2381 102.947 79.2381C116.622 79.2381 127.709 90.3244 127.709 104Z" fill="white"/>
-            </svg> 
+                <path
+                    d="M127.709 104C127.709 117.676 116.622 128.762 102.947 128.762C89.2712 128.762 78.1849 117.676 78.1849 104C78.1849 90.3244 89.2712 79.2381 102.947 79.2381C116.622 79.2381 127.709 90.3244 127.709 104Z"
+                    fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M102.947 208C155.34 208 198.684 169.257 205.894 118.857H144.982C138.863 136.169 122.353 148.571 102.947 148.571C83.5401 148.571 67.0303 136.169 60.9116 118.857H0C7.20912 169.257 50.5535 208 102.947 208ZM60.9116 89.1429H0C7.20912 38.7431 50.5535 0 102.947 0C155.34 0 198.684 38.7431 205.894 89.1429H144.982C138.863 71.8314 122.353 59.4286 102.947 59.4286C83.5401 59.4286 67.0303 71.8314 60.9116 89.1429ZM127.709 104C127.709 117.676 116.622 128.762 102.947 128.762C89.2712 128.762 78.1849 117.676 78.1849 104C78.1849 90.3244 89.2712 79.2381 102.947 79.2381C116.622 79.2381 127.709 90.3244 127.709 104Z"
+                    fill="white" />
+            </svg>
         </div>
 
     </main>
 
-    <script defer src="./js/modal,js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script src="./js/pokemon-detail.js"></script>
 
 </body>
+
 </html>
